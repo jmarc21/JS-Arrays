@@ -9,7 +9,7 @@ var arr = [10,20,30];
 
 //Next problem
 
-
+//practice git
 
 var arr = [40,50,60];
 //Create a function named 'last' that is given 'arr' as the argument and returns the last item in the given array.
