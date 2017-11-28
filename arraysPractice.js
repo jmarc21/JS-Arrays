@@ -43,8 +43,8 @@ var letters = ['A', 'B', 'C', 'D', 'E'];
 //Write a function called reversedLooper that is given letters as it's only argument and loops through the given array backwards alerting every item in the array starting at the end.
 
   function reversedLooper(letters){
-    for(i=family.length;i>0;i--){
-      alert(family[i]);
+    for(i=letters.length-1;i>=0;i--){
+      alert(letters[i]);
     }
   }
 
@@ -56,11 +56,13 @@ var nums = [1,2,3,6,22,98,45,23,22,12];
 //Write a function named evenFinder that is given nums as it's only argument and removes all values that aren't even from the given array.
 
   function evenFinder(nums){
+    var evenArr= [];
     for(i=0;i<nums.length;i++){
       if (nums[i]%2===0){
-        delete nums[i];
+         evenArr.push(nums[i]);
       }
     }
+    return evenArr;
   }
 
 
@@ -90,13 +92,17 @@ var numbersArray = [1,2,34,54,55,34,32,11,19,17,54,66,13];
 
 
   function divider(numbersArray){
-    newArr=[];
+    var newArr=[]
+    var even=[]
+    var odd=[]
     for(i=0;i<numbersArray.length;i++){
       if (numbersArray[i]%2===0){
-        newArr.push(numbersArray[i]);
+        even.push(numbersArray[i]);
       }else{
-        newArr.push(numbersArray);
+        odd.push(numbersArray[i]);
       }
+      newArr[0]=even;
+      newArr[1]=odd;
     }
     return newArr;
   }
@@ -112,8 +118,17 @@ var getRandomArbitrary = function() {
 //Above you're given a function that will return a random number between 0 and 30.  There is also a commented out array full of numbers to help you visualize what your function will be receiving.
 
 // Your job is to write a function named finder that will get a random number (by invoking getRandomArbitrary), then loop through the array (that will be passed in as a parameter) to see if that random number is in the array. If it is, return true, if it's not, return false
-
-  //Code Here
+var randomNum = getRandomArbitrary();
+  function finder(getRandomArbitrary){
+    for(i=0;i<getRandomArbitrary.length;i++){
+      if(getRandomArbitrary[i]===randomNum){
+        return true;
+      }else if (getRandomArbitrary!=randomNum){
+        return false;
+      }
+    }
+  }
+  
 
 
 
