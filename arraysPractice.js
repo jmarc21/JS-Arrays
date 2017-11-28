@@ -103,8 +103,8 @@ var numbersArray = [1,2,34,54,55,34,32,11,19,17,54,66,13];
       }
       newArr[0]=even;
       newArr[1]=odd;
-    }
-    return newArr;
+    }console.log(newArr)
+    return [even,odd];
   }
 
 
@@ -118,15 +118,14 @@ var getRandomArbitrary = function() {
 //Above you're given a function that will return a random number between 0 and 30.  There is also a commented out array full of numbers to help you visualize what your function will be receiving.
 
 // Your job is to write a function named finder that will get a random number (by invoking getRandomArbitrary), then loop through the array (that will be passed in as a parameter) to see if that random number is in the array. If it is, return true, if it's not, return false
-var randomNum = getRandomArbitrary();
-  function finder(getRandomArbitrary){
-    for(i=0;i<getRandomArbitrary.length;i++){
-      if(getRandomArbitrary[i]===randomNum){
+  function finder(array){
+    var randomNum = getRandomArbitrary();
+    for(var i=0;i<array.length;i++){
+    if(array[i]===randomNum){
         return true;
-      }else if (getRandomArbitrary!=randomNum){
-        return false;
       }
     }
+    return false;
   }
   
 
