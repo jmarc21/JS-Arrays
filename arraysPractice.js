@@ -151,8 +151,25 @@ var myGroceryList = ['chips', 'pizza', 'hotpockets', 'MtnDew', 'corndogs'];
   In both the removeItem function and the addItem function, you will also need to check for valid aurguments. Specrunner will try to call your functions without passing in valid aurguments. When this happens, you will need to respond by returning an empty array.
 */
 
-  //Code Here
+  function removeItem(myGroceryList,item){
+    for(var i = 0;i<myGroceryList.length;i++){
+      if(myGroceryList[i]===item){
+         myGroceryList.splice(item,1);
+      }
+    }
+    return myGroceryList;
+  }
+console.log(removeItem(myGroceryList,'chips'))
 
+function addItem(myGroceryList,item){
+  for(var i = 0;i<myGroceryList.length;i++){
+    
+       myGroceryList.push(item);
+    
+  }
+  return myGroceryList;
+}
+console.log(addItem(myGroceryList, "Jerky"))
 //removeItem(myGroceryList, 'chips') --> ['pizza', 'hotpockets', 'MtnDew', 'corndogs'];
 //addItem(myGroceryList, 'Jerky') --> ['pizza', 'hotpockets', 'MtnDew', 'corndogs', 'Jerky'];
 
