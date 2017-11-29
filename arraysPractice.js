@@ -196,7 +196,7 @@ var numbers = [5, '9', 16, 19, '25', '34', 48];
 
 function addTen(array){
   for (var i =0;i<array.length;i++){
-    array[i]+=10;
+    array[i]=parseInt(array[i])+10;
   }
   return array;
 }
